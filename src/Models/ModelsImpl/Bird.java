@@ -1,4 +1,4 @@
-package Models;
+package Models.ModelsImpl;
 
 public class Bird {
     int posisionY;

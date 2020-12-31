@@ -1,11 +1,10 @@
-package Models;
+package Models.ModelsImpl;
 
 public class Tubes {
     int Height;
     int Weight;
     int posisionX;
     int posisionY;
-
 
     public Tubes(int height, int weight, int posisionX, int posisionY) {
         Height = height;
