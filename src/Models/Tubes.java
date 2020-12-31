@@ -6,6 +6,7 @@ public class Tubes {
     int posisionX;
     int posisionY;
 
+
     public Tubes(int height, int weight, int posisionX, int posisionY) {
         Height = height;
         Weight = weight;
