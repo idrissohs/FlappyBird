@@ -1,16 +1,18 @@
-package Models.ModelsImpl;
+package models.modelsImpl;
 
 public class Tubes {
     int Height;
-    int Weight;
+    int Width;
     int posisionX;
     int posisionY;
+    boolean reverse;
 
-    public Tubes(int height, int weight, int posisionX, int posisionY) {
+    public Tubes(int height, int width, int posisionX, int posisionY, boolean reverse) {
         Height = height;
-        Weight = weight;
+        Width = width;
         this.posisionX = posisionX;
         this.posisionY = posisionY;
+        this.reverse = reverse;
     }
 
     public int getHeight() {
@@ -21,12 +23,12 @@ public class Tubes {
         Height = height;
     }
 
-    public int getWeight() {
-        return Weight;
+    public int getWidth() {
+        return Width;
     }
 
-    public void setWeight(int weight) {
-        Weight = weight;
+    public void setWidth(int width) {
+        Width = width;
     }
 
     public int getPosisionX() {
@@ -43,5 +45,13 @@ public class Tubes {
 
     public void setPosisionY(int posisionY) {
         this.posisionY = posisionY;
+    }
+
+    public boolean isReverse() {
+        return reverse;
+    }
+
+    public void setReverse(boolean reverse) {
+        this.reverse = reverse;
     }
 }
