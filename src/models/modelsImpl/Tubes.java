@@ -1,11 +1,11 @@
 package models.modelsImpl;
 
 public class Tubes {
-    int Height;
-    int Width;
-    int posisionX;
-    int posisionY;
-    boolean reverse;
+    private int Height;
+    private int Width;
+    private int posisionX;
+    private int posisionY;
+    private boolean reverse;
 
     public Tubes(int height, int width, int posisionX, int posisionY, boolean reverse) {
         Height = height;

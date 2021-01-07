@@ -1,7 +1,7 @@
 package models.modelsImpl;
 
 public class Bird {
-    int positionY;
+    private int positionY;
 
     public Bird(int positionY) {
         this.positionY = positionY;
@@ -13,5 +13,9 @@ public class Bird {
 
     public void setPositionY(int positionY) {
         this.positionY = positionY;
+    }
+
+    public int fly() {
+        return positionY+=1;
     }
 }
