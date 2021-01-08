@@ -32,6 +32,4 @@ public class Game {
 
         return result0 +result1;
     }*/
-
-
 }
