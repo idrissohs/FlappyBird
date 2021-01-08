@@ -1,9 +1,54 @@
 package models.modelsImpl;
 
 public class Game {
+    private Bird bird;
+    private Tubes[] tubes;
+    private int height = 10;
+    private int width = 30;
 
+    public Game() {
+        this.tubes = new Tubes[6];
+        this.tubes[0] = new Tubes(3, 3, 10, 7, true);
+        this.tubes[1] = new Tubes(6, 3, 10, 0, false);
+        this.tubes[2] = new Tubes(4, 3, 17, 6, true);
+        this.tubes[3] = new Tubes(5, 3, 17, 0, false);
+        this.tubes[4] = new Tubes(7, 3, 21, 3, true);
+        this.tubes[5] = new Tubes(2, 3, 21, 0, false);
 
-//    private cell[][]  grid;
+        this.bird = new Bird(7);
+    }
+
+    public  String toString(){
+        String result = "";
+
+        String onePixelX = " ";
+        String onePixelY = "\n";
+
+        result += "|------------------------------|"+onePixelY;
+
+        for (int y = 0; y <= height; y++) {
+            result += "|";
+            for (int x = 0; x < width; x++) {
+
+                //check if tube or bird exist
+                //Itube iS tube AND Ibird iS tube
+                //if not do onePixelX
+
+               /* if (Itube != exist && Ibird != exist) {
+                    result += onePixelX;
+                }
+                */
+
+                result += onePixelX;
+            }
+            result += "|"+onePixelY;
+        }
+        result += "|------------------------------|";
+
+        return result;
+    }
+
+    //    private cell[][]  grid;
 //    private int size = 6;
 //
 //    public Game(){

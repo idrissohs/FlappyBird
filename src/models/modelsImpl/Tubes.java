@@ -1,34 +1,34 @@
 package models.modelsImpl;
 
 public class Tubes {
-    private int Height;
-    private int Width;
+    private int height;
+    private int width;
     private int posisionX;
     private int posisionY;
     private boolean reverse;
 
     public Tubes(int height, int width, int posisionX, int posisionY, boolean reverse) {
-        Height = height;
-        Width = width;
+        this.height = height;
+        this.width = width;
         this.posisionX = posisionX;
         this.posisionY = posisionY;
         this.reverse = reverse;
     }
 
     public int getHeight() {
-        return Height;
+        return height;
     }
 
     public void setHeight(int height) {
-        Height = height;
+        this.height = height;
     }
 
     public int getWidth() {
-        return Width;
+        return width;
     }
 
     public void setWidth(int width) {
-        Width = width;
+        this.width = width;
     }
 
     public int getPosisionX() {
