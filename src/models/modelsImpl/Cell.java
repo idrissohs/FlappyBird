@@ -1,10 +1,10 @@
 package models.modelsImpl;
 
-public class cell {
+public class Cell {
 
     private String value;
 
-    public cell( String value) { ;
+    public Cell( String value) { ;
         this.value = value;
     }
 

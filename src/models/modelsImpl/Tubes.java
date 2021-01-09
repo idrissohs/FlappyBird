@@ -1,34 +1,34 @@
 package models.modelsImpl;
 
 public class Tubes {
-    private int Height;
-    private int Width;
+    private int height;
+    private int width;
     private int posisionX;
     private int posisionY;
     private boolean reverse;
 
     public Tubes(int height, int width, int posisionX, int posisionY, boolean reverse) {
-        Height = height;
-        Width = width;
+        height = height;
+        width = width;
         this.posisionX = posisionX;
         this.posisionY = posisionY;
         this.reverse = reverse;
     }
 
     public int getHeight() {
-        return Height;
+        return height;
     }
 
     public void setHeight(int height) {
-        Height = height;
+        height = height;
     }
 
     public int getWidth() {
-        return Width;
+        return width;
     }
 
     public void setWidth(int width) {
-        Width = width;
+        width = width;
     }
 
     public int getPosisionX() {
@@ -53,5 +53,19 @@ public class Tubes {
 
     public void setReverse(boolean reverse) {
         this.reverse = reverse;
+    }
+
+    public void addTubeToGrid(Cell[][]  grid) {
+        if (reverse) {
+            grid[posisionX][posisionY].setValue("|_|");
+            for (int i = posisionY + 1; i < posisionY + height; i --) {
+                grid[posisionX][i].setValue("| |");
+            }
+        } else {
+            grid[posisionX][posisionY].setValue("|⎺|");
+            for (int i = posisionY + 1; i < posisionY + height; i ++) {
+                grid[posisionX][i].setValue("| |");
+            }
+        }
     }
 }

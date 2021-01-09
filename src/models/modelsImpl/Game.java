@@ -1,37 +1,43 @@
 package models.modelsImpl;
 
 public class Game {
-    private cell[][]  grid;
+    private Cell[][]  grid;
+    private Bird bird;
+    private Tubes[] tubes;
     private int size = 10;
 
     public Game(){
-        this.grid = new cell[10][20];
+        this.grid = new Cell[10][20];
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 20; j++) {
-                this.grid[i][j] = new cell("  ");
+                this.grid[i][j] = new Cell("  ");
             }
         }
+
+        this.tubes = new Tubes[6];
+        this.tubes[0] = new Tubes(3, 3, 10, 7, true);
+        this.tubes[1] = new Tubes(6, 3, 10, 0, false);
+        this.tubes[2] = new Tubes(4, 3, 17, 6, true);
+        this.tubes[3] = new Tubes(5, 3, 17, 0, false);
+        this.tubes[4] = new Tubes(7, 3, 21, 3, true);
+        this.tubes[5] = new Tubes(2, 3, 21, 0, false);
+
+        for (Tubes tube : this.tubes) {
+            tube.addTubeToGrid(this.grid);
+        }
+
+        this.bird = new Bird(7);
     }
 
-    public cell getCell(int i,int j){
+    public Cell getCell(int i,int j){
         return this.grid[i][j];
     }
 
-    /*public  String toString(){
-        String result0 = "|____________________________________________|\n";
-        String result1 = "|";
-        String resultF = "";
+    public void setCell(int i, int j, String value) { this.grid[i][j] = new Cell(value); }
 
-        this.grid = new cell[10][20];
-        for (int i = 0; i < 10; i++) {
-            System.out.println(result0);
-            for (int j = 0; j < 20; j++) {
-                this.grid[i][j] = new cell(result1);
-            }
-        }
-
-        return result0 +result1;
-    }*/
+    public  String toString(){
+        return this.grid.toString();
+    }
 
 
 }
